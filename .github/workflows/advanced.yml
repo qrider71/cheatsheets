@@ -11,11 +11,11 @@ jobs:
           mkdir output  # create output dir
       - uses: docker://pandoc/latex:2.9
         with:
-          args: --output=output/result.pdf README.md
+          args: --output=output/Docker.pdf Docker.md
       - uses: docker://pandoc/latex:2.9
         with:
           args: --output=output/README.pdf README.md
       - uses: actions/upload-artifact@master
         with:
-          name: output
+          name: cheatsheets
           path: output
