@@ -9,9 +9,23 @@ jobs:
       - uses: actions/checkout@v2
       - run: |
           mkdir output  # create output dir
+      - run: |
+          make
       - uses: docker://pandoc/latex:2.9
         with:
           args: --output=output/Docker.pdf Docker.md
+      - uses: docker://pandoc/latex:2.9
+        with:
+          args: --output=output/Docker.pdf Keycloak.md
+      - uses: docker://pandoc/latex:2.9
+        with:
+          args: --output=output/Docker.pdf Kustomize.md
+      - uses: docker://pandoc/latex:2.9
+        with:
+          args: --output=output/Docker.pdf Maven.md
+      - uses: docker://pandoc/latex:2.9
+        with:
+          args: --output=output/Docker.pdf Openshift.md
       - uses: docker://pandoc/latex:2.9
         with:
           args: --output=output/README.pdf README.md
