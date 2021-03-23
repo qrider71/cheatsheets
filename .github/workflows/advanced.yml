@@ -10,7 +10,7 @@ jobs:
       - run: |
           mkdir output  # create output dir
       - run: |
-          make
+          make all
       - uses: docker://pandoc/latex:2.9
         with:
           args: --output=output/Docker.pdf Docker.md
