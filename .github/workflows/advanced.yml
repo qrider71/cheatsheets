@@ -10,9 +10,6 @@ jobs:
       - uses: docker://pandoc/latex:2.9
         with:
           args: --output=output/result.pdf README.md
-      - uses: docker://pandoc/latex:2.9
-          with:
-            args: --output=output/result2.pdf README.md
       - uses: actions/upload-artifact@master
         with:
           name: output
