@@ -1,4 +1,4 @@
-# Docker Cheat Sheet
+# Docker Cheat Sheet (https://github.com/qrider71/cheatsheets)
 
 ## Images
 
@@ -20,10 +20,7 @@ __Create an image from a remote repository (using the "main" branch)__
 |-f          |specify docker file  | ```-f MyDockerfile```                |
 |--build-arg | pass build variable | ```--build-arg XYZ=MyValue```        |
 
-__List all images__
-```
-> docker image ls -a
-```
+__List all images:__ ```> docker image ls -a```
 
 __Delete image__
 ```
@@ -31,10 +28,7 @@ __Delete image__
 > docker image rm b50d42fe3c3e
 ```
 
-__Delete unused images__
-```
-> docker image prune
-```
+__Delete unused images:__ ```> docker image prune```
 
 ## Containers
 
@@ -44,10 +38,9 @@ __Run container:__ Creates a new container and starts it
 > docker run -it --rm -v "`pwd`/tmp:/data" --user `id -u`:`id -g` alpine:3.7 /bin/sh
 ```
 
-__Start container:__ Starts an erxisting container (maybe after it has been stopped)
+__Start container:__ Starts an existing container (maybe after it has been stopped)
 ```
 > docker start my-container
-> docker start b50d42fe3c3e
 ```
 
 ### Options
@@ -63,17 +56,8 @@ __Start container:__ Starts an erxisting container (maybe after it has been stop
 |--rm        |remove container after termination         | |
 |-d          |detached mode           | |
 
-__Show all container processes:__
-```
-> docker ps -a
-```
+__Show all container processes:__ ```> docker ps -a```
 
-__Stop container:__
-```
-> docker stop my-container
-```
+__Stop container:__               ```> docker stop my-container```
 
-__Remove unused container:__
-```
-> docker container prune
-```
+__Remove unused container:__      ```> docker container prune```

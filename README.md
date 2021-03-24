@@ -1,4 +1,4 @@
-# Cheat Sheets
+# Cheat Sheets (https://github.com/qrider71/cheatsheets)
 My cheat sheets for various topics
 
 ## Development
